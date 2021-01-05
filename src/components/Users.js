@@ -7,8 +7,6 @@ class Users extends Component {
     return (
       <div>
         <ul>
-          {/* Write code here that displays the usernames of all users in the Redux store */}
-          {/* In addition, display the total number of users curently in the store */}
           Users: {users.length}
           {users.map((user, index) => (
             <li key={index}>{user.username}</li>
@@ -19,12 +17,10 @@ class Users extends Component {
   }
 }
 
-//add mapStateToProps here
 const mapStateToProps = (state) => {
   return {
     users: state.users,
   };
 };
 
-// connect this component to Redux
 export default connect(mapStateToProps)(Users);
