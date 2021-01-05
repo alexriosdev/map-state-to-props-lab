@@ -3,13 +3,14 @@ import { connect } from "react-redux";
 
 class Users extends Component {
   render() {
+    let { users } = this.props;
     return (
       <div>
         <ul>
           {/* Write code here that displays the usernames of all users in the Redux store */}
           {/* In addition, display the total number of users curently in the store */}
-          Users: {this.props.users.length}
-          {this.props.users.map((user, index) => (
+          Users: {users.length}
+          {users.map((user, index) => (
             <li key={index}>{user.username}</li>
           ))}
         </ul>
